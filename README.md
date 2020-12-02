@@ -2,4 +2,158 @@
 
 That is a template for Kotlin Multiplatform Projects. How to use it:
 
-* Create repository 
+* Create your repository from this template
+* Replace in a whole project `project_group` by your group
+* Replace in a whole project `project_name` by your **ROOT** project name
+* Update your subproject packages. It is not critical, but recommended especially in case you plan to publish your
+  library
+
+## Subprojects
+
+In this template there is only one subproject with name `lib`. You are always able to rename it, but remember that in
+this case you must rename it in `settings.gradle` file.
+
+## Types of projects
+
+### `mppProjectWithSerialization`
+
+This type of preset have `JVM`, `JS` and `Android` targets and available using
+`apply from: "$mppProjectWithSerializationPresetPath"`. Template for project with this preset looks like next snippet:
+
+```groovy
+plugins {
+    id "org.jetbrains.kotlin.multiplatform"
+    id "org.jetbrains.kotlin.plugin.serialization"
+    id "com.android.library"
+}
+
+apply from: "$mppProjectWithSerializationPresetPath"
+
+// The code below is optional
+
+kotlin {
+    sourceSets {
+        commonMain {
+            dependencies {
+                // common dependencies
+            }
+        }
+        commonTest {
+            dependencies {
+                // common test dependencies
+            }
+        }
+        jvmMain {
+            dependencies {
+                // jvm dependencies
+            }
+        }
+        jvmTest {
+            dependencies {
+                // jvm test dependencies
+            }
+        }
+        jsMain {
+            dependencies {
+                // js dependencies
+            }
+        }
+        jsTest {
+            dependencies {
+                // js test dependencies
+            }
+        }
+        androidMain {
+            dependencies {
+                // android dependencies
+            }
+        }
+        androidTest {
+            dependencies {
+                // android test dependencies
+            }
+        }
+    }
+}
+```
+
+### `mppJavaProject`
+
+This type of preset have only `JVM` target and available using `apply from: "$mppJavaProjectPresetPath"`. Template for
+project with this preset looks like next snippet:
+
+```groovy
+plugins {
+    id "org.jetbrains.kotlin.multiplatform"
+}
+
+apply from: "$mppJavaProjectPresetPath"
+
+// The code below is optional
+
+kotlin {
+    sourceSets {
+        commonMain {
+            dependencies {
+                // common dependencies
+            }
+        }
+        commonTest {
+            dependencies {
+                // common test dependencies
+            }
+        }
+        jvmMain {
+            dependencies {
+                // jvm dependencies
+            }
+        }
+        jvmTest {
+            dependencies {
+                // jvm test dependencies
+            }
+        }
+    }
+}
+```
+
+### `mppAndroidProject`
+
+This type of preset have only `Android` target and available using `apply from: "$mppAndroidProjectPresetPath"`. Template for
+project with this preset looks like next snippet:
+
+```groovy
+plugins {
+    id "org.jetbrains.kotlin.multiplatform"
+    id "com.android.library"
+}
+
+apply from: "$mppAndroidProjectPresetPath"
+
+// The code below is optional
+
+kotlin {
+    sourceSets {
+        commonMain {
+            dependencies {
+                // common dependencies
+            }
+        }
+        commonTest {
+            dependencies {
+                // common test dependencies
+            }
+        }
+        androidMain {
+            dependencies {
+                // android dependencies
+            }
+        }
+        androidTest {
+            dependencies {
+                // android test dependencies
+            }
+        }
+    }
+}
+```
