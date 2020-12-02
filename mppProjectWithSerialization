@@ -1,0 +1,50 @@
+project.version = "$version"
+project.group = "$group"
+
+// apply from: "$publishGradlePath"
+
+kotlin {
+    jvm()
+    js (BOTH) {
+        browser()
+        nodejs()
+    }
+    android {
+        publishAllLibraryVariants()
+    }
+
+    sourceSets {
+        commonMain {
+            dependencies {
+                implementation kotlin('stdlib')
+                api "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialisation_core_version"
+            }
+        }
+        commonTest {
+            dependencies {
+                implementation kotlin('test-common')
+                implementation kotlin('test-annotations-common')
+            }
+        }
+        jvmTest {
+            dependencies {
+                implementation kotlin('test-junit')
+            }
+        }
+        jsTest {
+            dependencies {
+                implementation kotlin('test-js')
+                implementation kotlin('test-junit')
+            }
+        }
+        androidTest {
+            dependencies {
+                implementation kotlin('test-junit')
+                implementation "androidx.test.ext:junit:$test_ext_junit_version"
+                implementation "androidx.test.espresso:espresso-core:$espresso_core"
+            }
+        }
+    }
+}
+
+apply from: "$defaultAndroidSettingsPresetPath"

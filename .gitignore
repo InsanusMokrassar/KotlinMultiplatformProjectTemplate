@@ -1,0 +1,15 @@
+.idea
+out/*
+*.iml
+target
+
+settings.xml
+
+.gradle/
+build/
+out/
+
+secret.gradle
+local.properties
+
+publishing.sh
