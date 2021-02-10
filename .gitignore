@@ -10,6 +10,6 @@ build/
 out/
 
 secret.gradle
-# local.properties
+local.properties
 
 publishing.sh
