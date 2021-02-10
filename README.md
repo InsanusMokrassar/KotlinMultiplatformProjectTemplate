@@ -3,6 +3,7 @@
 That is a template for Kotlin Multiplatform Projects. How to use it:
 
 * Create your repository from this template
+* Fill `local.properties` in case you plan to use `Android` target (you must set up location of SDK, it will not be tracked by `git` and it is correct behaviour)
 * Replace in a whole project `project_group` by your group
 * Replace in a whole project `project_name` by your **ROOT** project name
 * Update your subproject packages. It is not critical, but recommended especially in case you plan to publish your
