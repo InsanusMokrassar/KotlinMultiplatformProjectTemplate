@@ -3,7 +3,16 @@
 That is a template for Kotlin Multiplatform Projects. How to use it:
 
 * Create your repository from this template
-* Fill `local.properties` in case you plan to use `Android` target (you must set up location of SDK, it will not be tracked by `git` and it is correct behaviour)
+* Add `local.properties` file in case you plan to use `Android` target (you must set up location of SDK, it will not be tracked by `git` and it is correct behaviour)
+```properties
+## This file must *NOT* be checked into Version Control Systems,
+# as it contains information specific to your local configuration.
+#
+# Location of the SDK. This is only used by Gradle.
+# For customization when using a Version Control System, please read the
+# header note.
+sdk.dir=/your/path/to/android/sdk
+```
 * Replace in a whole project `project_group` by your group
 * Replace in a whole project `project_name` by your **ROOT** project name
 * Update your subproject packages. It is not critical, but recommended especially in case you plan to publish your
