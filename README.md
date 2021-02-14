@@ -3,7 +3,7 @@
 That is a template for Kotlin Multiplatform Projects. How to use it:
 
 * Create your repository from this template
-* Add `local.properties` file in case you plan to use `Android` target (you must set up location of SDK, it will not be tracked by `git` and it is correct behaviour)
+* Add `local.properties` file in case you plan to use `Android` target (you must set up location of SDK, it will not be tracked by `git` and it is correct behaviour). In the snippet below you may see approximate content of `local.properties` file:
 ```properties
 ## This file must *NOT* be checked into Version Control Systems,
 # as it contains information specific to your local configuration.
