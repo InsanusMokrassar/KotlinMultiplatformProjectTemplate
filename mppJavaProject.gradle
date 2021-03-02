@@ -1,4 +1,4 @@
-project.version = "$version" + System.getenv("additional_version")
+project.version = "$version"
 project.group = "$group"
 
 // apply from: "$publishGradlePath"
