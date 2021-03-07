@@ -127,6 +127,46 @@ kotlin {
 }
 ```
 
+### `mppJsProject`
+
+This type of preset have only `JS` target and available using `apply from: "mppJsProjectPresetPath"`. Template for
+project with this preset looks like next snippet:
+
+```groovy
+plugins {
+    id "org.jetbrains.kotlin.multiplatform"
+}
+
+apply from: "$mppJsProjectPresetPath"
+
+// The code below is optional
+
+kotlin {
+    sourceSets {
+        commonMain {
+            dependencies {
+                // common dependencies
+            }
+        }
+        commonTest {
+            dependencies {
+                // common test dependencies
+            }
+        }
+        jsMain {
+            dependencies {
+                // jvm dependencies
+            }
+        }
+        jsTest {
+            dependencies {
+                // jvm test dependencies
+            }
+        }
+    }
+}
+```
+
 ### `mppAndroidProject`
 
 This type of preset have only `Android` target and available using `apply from: "$mppAndroidProjectPresetPath"`. Template for
