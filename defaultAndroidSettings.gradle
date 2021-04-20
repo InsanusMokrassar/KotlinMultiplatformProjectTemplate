@@ -35,6 +35,7 @@ android {
     }
 
     sourceSets {
-        main.java.srcDirs += 'src/main/kotlin'
+        String sep = File.separator
+        main.java.srcDirs += "src${sep}main${sep}kotlin"
     }
 }
