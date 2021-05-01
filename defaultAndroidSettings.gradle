@@ -1,6 +1,31 @@
 apply plugin: 'com.getkeepsafe.dexcount'
 
 android {
+    ext {
+        jvmKotlinFolderFile = {
+            String sep = File.separator
+            return new File("${project.projectDir}${sep}src${sep}jvmMain${sep}kotlin")
+        }
+
+        enableIncludingJvmCodeInAndroidPart = {
+            File jvmKotlinFolder = jvmKotlinFolderFile()
+            if (jvmKotlinFolder.exists()) {
+                android.sourceSets.main.java.srcDirs += jvmKotlinFolder.path
+            }
+        }
+
+        disableIncludingJvmCodeInAndroidPart = {
+            File jvmKotlinFolder = jvmKotlinFolderFile()
+            String[] oldDirs = android.sourceSets.main.java.srcDirs
+            android.sourceSets.main.java.srcDirs = []
+            for (oldDir in oldDirs) {
+                if (oldDir != jvmKotlinFolder.path) {
+                    android.sourceSets.main.java.srcDirs += oldDir
+                }
+            }
+        }
+    }
+
     compileSdkVersion "$android_compileSdkVersion".toInteger()
     buildToolsVersion "$android_buildToolsVersion"
 

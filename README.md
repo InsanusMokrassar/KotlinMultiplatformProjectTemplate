@@ -23,6 +23,21 @@ sdk.dir=/your/path/to/android/sdk
 In this template there is only one subproject with name `lib`. You are always able to rename it, but remember that in
 this case you must rename it in `settings.gradle` file.
 
+## JVM sources in Android target
+
+By default JVM code is not included in Android target. In case you wish to include JVM sources in Android build, use
+next method in the end of your `build.gradle`:
+
+```groovy
+enableIncludingJvmCodeInAndroidPart()
+```
+
+In case when you need to be sure that JVM sources are not included in Android part, use this snippet:
+
+```groovy
+disableIncludingJvmCodeInAndroidPart()
+```
+
 ## Types of projects
 
 ### `mppProjectWithSerialization`
