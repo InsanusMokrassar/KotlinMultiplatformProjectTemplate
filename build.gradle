@@ -1,6 +1,5 @@
 buildscript {
     repositories {
-        jcenter()
         google()
         mavenCentral()
         mavenLocal()
@@ -19,10 +18,8 @@ buildscript {
 allprojects {
     repositories {
         mavenLocal()
-        jcenter()
         mavenCentral()
         google()
-        maven { url "https://kotlin.bintray.com/kotlinx" }
     }
 }
 
