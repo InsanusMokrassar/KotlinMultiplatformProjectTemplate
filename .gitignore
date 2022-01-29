@@ -10,6 +10,8 @@ build/
 out/
 
 secret.gradle
-local.properties
+local.*
+local/
+kotlin-js-store/
 
 publishing.sh

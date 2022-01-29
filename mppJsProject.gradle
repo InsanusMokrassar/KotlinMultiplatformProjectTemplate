@@ -12,19 +12,20 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation kotlin('stdlib')
+                implementation libs.kotlin
+                api libs.kotlin.serialization
             }
         }
         commonTest {
             dependencies {
-                implementation kotlin('test-common')
-                implementation kotlin('test-annotations-common')
+                implementation libs.kotlin.test.common
+                implementation libs.kotlin.test.annotations.common
             }
         }
         jsTest {
             dependencies {
-                implementation kotlin('test-js')
-                implementation kotlin('test-junit')
+                implementation libs.kotlin.test.js
+                implementation libs.kotlin.test.junit
             }
         }
     }

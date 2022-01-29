@@ -11,13 +11,21 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation kotlin('stdlib')
+                implementation libs.kotlin
+                api libs.kotlin.serialization
             }
         }
         commonTest {
             dependencies {
-                implementation kotlin('test-common')
-                implementation kotlin('test-annotations-common')
+                implementation libs.kotlin.test.common
+                implementation libs.kotlin.test.annotations.common
+            }
+        }
+        androidTest {
+            dependencies {
+                implementation libs.kotlin.test.junit
+                implementation libs.android.test.junit
+                implementation libs.android.test.espresso.core
             }
         }
     }
