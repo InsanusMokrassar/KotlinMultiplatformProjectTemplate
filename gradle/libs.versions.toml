@@ -1,7 +1,7 @@
 [versions]
 
 kotlin = "1.7.10"
-kotlin-serialization = "1.4.0-RC"
+kotlin-serialization = "1.4.0"
 
 dexcount = "3.1.0"
 junit_version = "4.12"
