@@ -1,4 +1,4 @@
-package project_group
+package project_group.project_name.lib
 
 class Library {
     fun someLibraryMethod(): Boolean {

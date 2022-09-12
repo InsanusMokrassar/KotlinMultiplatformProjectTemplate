@@ -1,0 +1,1 @@
+package project_group.project_name.template
