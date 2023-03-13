@@ -3,7 +3,7 @@
 kotlin = "1.8.10"
 kotlin-serialization = "1.5.0"
 
-dokka = "1.7.20"
+dokka = "1.8.10"
 
 dexcount = "3.1.0"
 junit_version = "4.12"
