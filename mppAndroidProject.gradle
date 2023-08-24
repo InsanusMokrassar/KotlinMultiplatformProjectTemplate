@@ -21,7 +21,7 @@ kotlin {
                 implementation libs.kotlin.test.annotations.common
             }
         }
-        androidTest {
+        androidUnitTest {
             dependencies {
                 implementation libs.kotlin.test.junit
                 implementation libs.android.test.junit
