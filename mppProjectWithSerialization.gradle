@@ -43,7 +43,7 @@ kotlin {
                 implementation libs.kotlin.test.junit
             }
         }
-        androidTest {
+        androidUnitTest {
             dependencies {
                 implementation libs.kotlin.test.junit
                 implementation libs.android.test.junit
