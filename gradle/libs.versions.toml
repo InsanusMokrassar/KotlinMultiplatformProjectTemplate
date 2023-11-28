@@ -1,7 +1,7 @@
 [versions]
 
-kotlin = "1.9.20"
-kotlin-serialization = "1.6.0"
+kotlin = "1.9.21"
+kotlin-serialization = "1.6.1"
 
 dokka = "1.9.10"
 
@@ -10,7 +10,7 @@ junit_version = "4.12"
 test_ext_junit_version = "1.1.5"
 espresso_core = "3.5.1"
 
-android-gradle-plugin = "8.1.2"
+android-gradle-plugin = "8.1.4"
 android-minSdk = "21"
 android-compileSdk = "34"
 android-buildTools = "34.0.0"
