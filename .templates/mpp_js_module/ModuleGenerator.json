@@ -1,5 +1,5 @@
 {
-   "module_path": "feature/sample",
-   "module_package": "{{.module_path.replace(\"/\", \".\")}}",
-   "full_module_package": "project_group.{{.module_path.replace(\"/\", \".\")}}"
+   "module_name": "sample",
+   "module_package": "feature.{{.module_name}}",
+   "full_module_package": "project_group.project_name.{{.module_package}}"
 }
