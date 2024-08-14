@@ -8,6 +8,7 @@ android {
 
     defaultConfig {
         minSdkVersion libs.versions.android.minSdk.get().toInteger()
+        compileSdkVersion libs.versions.android.compileSdk.get().toInteger()
         targetSdkVersion libs.versions.android.compileSdk.get().toInteger()
         versionCode "${android_code_version}".toInteger()
         versionName "$version"
