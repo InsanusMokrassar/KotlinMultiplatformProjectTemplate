@@ -4,14 +4,13 @@ android {
     compileSdkVersion libs.versions.android.compileSdk.get().toInteger()
     buildToolsVersion libs.versions.android.buildTools.get()
 
-    namespace "${group}.${project.name}"
-
     defaultConfig {
         minSdkVersion libs.versions.android.minSdk.get().toInteger()
         compileSdkVersion libs.versions.android.compileSdk.get().toInteger()
         targetSdkVersion libs.versions.android.compileSdk.get().toInteger()
         versionCode "${android_code_version}".toInteger()
         versionName "$version"
+        namespace "${project.group}.${project.name}"
     }
     buildTypes {
         release {
@@ -31,10 +30,5 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
-    }
-
-    sourceSets {
-        String sep = File.separator
-        main.java.srcDirs += "src${sep}main${sep}kotlin"
     }
 }
