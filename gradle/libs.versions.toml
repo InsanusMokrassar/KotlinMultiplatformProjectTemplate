@@ -4,7 +4,7 @@ kotlin = "2.3.21"
 kotlin-serialization = "1.11.0"
 kotlin-coroutines = "1.10.2"
 
-dokka = "2.1.0"
+dokka = "2.2.0"
 
 dexcount = "4.0.0"
 junit_version = "4.12"
