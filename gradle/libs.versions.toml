@@ -2,7 +2,7 @@
 
 kotlin = "2.3.21"
 kotlin-serialization = "1.11.0"
-kotlin-coroutines = "1.10.2"
+kotlin-coroutines = "1.11.0"
 
 dokka = "2.2.0"
 
